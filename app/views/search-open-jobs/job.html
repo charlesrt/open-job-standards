@@ -1,0 +1,244 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/find-work/results">Back</a>
+
+      <h1 class="heading-large">
+				{{job.title}}
+			</h1>
+
+			<p class="lede">
+        at <span class="bold-medium">{{job.hiringOrganization.name}}</span>
+			</p>
+
+      {% if job.jobLocation.address.postalCode %}
+
+      <div class="map-container">
+        <div id="map" style="width:100%;height:160px;border:1px solid #bfc1c3;position:relative;"></div>
+        <p class="bold-small map-location">{{job.jobLocation.address.addressLocality}}{% if job.jobLocation.address.addressRegion %}, {{job.jobLocation.address.addressRegion}}{% endif %}</p>
+      </div>
+
+      {% endif %}
+
+			<table>
+		    <tbody>
+          <tr style="border-top:1px solid #bfc1c3;">
+            {% if not job.jobLocation.address.postalCode %}
+		        <td>Location</td>
+		        <td class="bold-small">{{job.jobLocation.address.addressLocality}}{% if job.jobLocation.address.addressRegion %}, {{job.jobLocation.address.addressRegion}}{% endif %}</td>
+		      </tr>
+		      <tr>
+            {% endif %}
+		        <td>Salary</td>
+		        <td class="bold-small">&pound;{{job.minSalary}} {% if job.maxSalary %}&mdash; &pound;{{job.maxSalary}}{% endif %}</td>
+		      </tr>
+          {% if job.incentiveCompensation %}
+					<tr>
+		        <td>Incentive compensation</td>
+		        <td class="bold-small">{{job.incentiveCompensation}}</td>
+		      </tr>
+          {% endif %}
+		      <tr>
+			       <td>Work hours</td>
+			       <td class="bold-small">{{job.workHours}}</td>
+		      </tr>
+		      <tr>
+		        <td>Employment type</td>
+		        <td class="bold-small">{{job.employmentType}}</td>
+		      </tr>
+          {% if job.jobBenefits %}
+					<tr>
+		        <td>Job benefits</td>
+		        <td class="bold-small">{{job.jobBenefits}}</td>
+		      </tr>
+          {% endif %}
+          <tr>
+		        <td>Closing date</td>
+		        <td class="bold-small">{{job.dateClosing}}</td>
+		      </tr>
+		    </tbody>
+		  </table>
+
+			<h2 class="heading-medium">Responsibilities</h2>
+
+			<p>{{job.responsibilities}}</p>
+
+			<h2 class="heading-medium">Skills</h2>
+
+			<p>{{job.skills}}</p>
+
+      {% if job.qualifications %}
+
+			<h2 class="heading-medium">Qualifications</h2>
+
+			<p>{{job.qualifications}}</p>
+
+      {% endif %}
+
+      {% if job.experienceRequirements %}
+
+			<h2 class="heading-medium">Experience requirements</h2>
+
+			<p>{{job.experienceRequirements}}</p>
+
+      {% endif %}
+
+      {% if job.educationRequirements %}
+
+			<h2 class="heading-medium">Education requirements</h2>
+
+			<p>{{job.educationRequirements}}</p>
+
+      {% endif %}
+
+			<p>
+				<a class="button button-start" href="/find-work/confirmation">Apply now</a>
+			</p>
+
+		</div>
+
+    <div class="column-third spacing-bottom-third">
+      <aside class="govuk-related-items" role="complementary">
+          <p>
+  					<a href="">Report this job</a>
+  				</p>
+      </aside>
+    </div>
+
+</main>
+{% endblock %}
+
+{% block body_end %}
+{% include "includes/scripts.html" %}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "JobPosting",
+  "dateClosing": "2011-11-30",
+  "datePosted": "2011-10-31",
+  "employmentType": "Permanent, Employed",
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "ABC Limited Company",
+    "contactPoint": "Jane Smith",
+    "email": "recruitment@abc.com",
+    "telephone": "0113234567",
+    "disabilityConfident": "Yes"
+  },
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Leeds"
+    }
+  },
+  "minSalary": "60,000",
+  "reference": "ABC123XXX",
+  "responsibilities": "Design and write specifications for tools for in-house customers. Build tools according to specifications.",
+  "skills": "Ability to work in a team environment with members of varying skill levels. Highly motivated. Learns quickly.",
+  "title": "Software Engineer",
+  "workHours": "40 hours per week"
+}
+</script>
+
+<script>
+function initMap() {
+  var customMapType = new google.maps.StyledMapType([
+    {
+        "featureType": "all",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            },
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#005ea5"
+            }
+        ]
+    }
+], {
+      name: 'Custom Style'
+  });
+  var customMapTypeId = 'custom_style';
+
+  var position = {};
+
+  $.ajax({
+      url: 'https://maps.googleapis.com/maps/api/geocode/json?address={{job.jobLocation.address.postalCode}}'
+    })
+    .done(function(data) {
+      position.lat = data.results[0].geometry.location.lat;
+      position.lng = data.results[0].geometry.location.lng;
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        zoomControl: true,
+        scrollwheel: false,
+        center: new google.maps.LatLng(position.lat, position.lng),  // Leeds.
+        mapTypeControlOptions: {
+          mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+        }
+      });
+
+      var icon = {
+        url: '/public/images/pin.png',
+        scaledSize: new google.maps.Size(26, 36),
+      }
+
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(position.lat, position.lng),
+        map: map,
+        icon: icon,
+        animation: google.maps.Animation.DROP,
+        title: ''
+      });
+      marker.addListener('click', toggleBounce);
+      map.mapTypes.set(customMapTypeId, customMapType);
+      map.setMapTypeId(customMapTypeId);
+  });
+}
+function toggleBounce() {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW0Ohl8tjseWY_hYLUs-3itKSZ055yTJQ&callback=initMap" async defer></script>
+
+{% endblock %}
