@@ -117,6 +117,37 @@
 {% block body_end %}
 {% include "includes/scripts.html" %}
 
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "JobPosting",
+  "dateClosing": "2011-11-30",
+  "datePosted": "2011-10-31",
+  "employmentType": "Permanent, Employed",
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "ABC Limited Company",
+    "contactPoint": "Jane Smith",
+    "email": "recruitment@abc.com",
+    "telephone": "0113234567",
+    "disabilityConfident": "Yes"
+  },
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Leeds"
+    }
+  },
+  "minSalary": "60,000",
+  "reference": "ABC123XXX",
+  "responsibilities": "Design and write specifications for tools for in-house customers. Build tools according to specifications.",
+  "skills": "Ability to work in a team environment with members of varying skill levels. Highly motivated. Learns quickly.",
+  "title": "Software Engineer",
+  "workHours": "40 hours per week"
+}
+</script>
+
 <script>
 function initMap() {
   var customMapType = new google.maps.StyledMapType([
