@@ -2,9 +2,15 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function (req, res) {
-  
+
   res.render('index');
 
+});router.get('/search-open-jobs/job/:id', function(req, res) {
+  var fs = require('fs');
+  var data = fs.readFileSync(__dirname + '/assets/data/jobs.json', 'utf-8');
+      data = JSON.parse(data);
+
+  res.render('search-open-jobs/job', {job: data.jobs[req.params.id]});
 });
 
 
