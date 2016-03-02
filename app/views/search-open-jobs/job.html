@@ -18,7 +18,7 @@
       {% if job.jobLocation.address.postalCode %}
 
       <div class="map-container">
-        <div id="map" style="width:100%;height:160px;border:1px solid #bfc1c3;position:relative;"></div>
+        <div id="map"></div>
         <p class="bold-small map-location">{{job.jobLocation.address.addressLocality}}{% if job.jobLocation.address.addressRegion %}, {{job.jobLocation.address.addressRegion}}{% endif %}</p>
       </div>
 
@@ -185,11 +185,8 @@ function initMap() {
         }
       });
 
-      alert(map);
-
-
       var icon = {
-        url: '/public/images/pin.png',
+        url: '{{ asset_path }}images/pin.png',
         scaledSize: new google.maps.Size(26, 36),
       }
 
