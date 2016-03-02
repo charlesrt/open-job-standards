@@ -5,46 +5,27 @@ router.get('/', function (req, res) {
 
   res.render('index');
 
-});router.get('/search-open-jobs/job/:id', function(req, res) {
+});
+
+// Route JSON job data to template variables and script string
+router.get('/search-open-jobs/job/:id', function(req, res) {
   var fs = require('fs');
   var data = fs.readFileSync(__dirname + '/assets/data/jobs.json', 'utf-8');
       data = JSON.parse(data);
 
-  res.render('search-open-jobs/job', {job: data.jobs[req.params.id]});
+  res.render('search-open-jobs/job', {
+    job : data.jobs[req.params.id],
+    jobString: JSON.stringify(data.jobs[req.params.id])
+  });
 });
 
+// Route job API
+router.get('/api/jobs/:id', function(req, res) {
+  var fs = require('fs');
+  var data = fs.readFileSync(__dirname + '/assets/data/jobs.json', 'utf-8');
+      data = JSON.parse(data);
 
-// Example routes - feel free to delete these
-
-// Passing data into a page
-
-router.get('/examples/template-data', function (req, res) {
-
-  res.render('examples/template-data', { 'name' : 'Foo' });
-
+res.json(data.jobs[req.params.id]);
 });
-
-// Branching
-
-router.get('/examples/over-18', function (req, res) {
-
-  // get the answer from the query string (eg. ?over18=false)
-  var over18 = req.query.over18;
-
-  if (over18 == "false"){
-
-    // redirect to the relevant page
-    res.redirect("/examples/under-18");
-
-  } else {
-
-    // if over18 is any other value (or is missing) render the page requested
-    res.render('examples/over-18');
-
-  }
-
-});
-
-// add your routes here
 
 module.exports = router;
