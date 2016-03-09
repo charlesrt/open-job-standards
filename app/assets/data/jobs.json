@@ -66,64 +66,6 @@
       "skills": "Ability to work in a team environment with members of varying skill levels. Highly motivated. Learns quickly.",
       "title": "Senior Software Engineer",
       "workHours": "40 hours per week"
-    },
-    {
-      "@context": "http://schema.org",
-      "@type": "JobPosting",
-      "dateClosing": "2016-3-30",
-      "datePosted": "2011-10-31",
-      "employmentType": "Permanent, Employed",
-      "hiringOrganization": {
-        "@type": "Organization",
-        "name": "Finance Group",
-        "contactPoint": "Jane Smith",
-        "email": "recruitment@finance.com",
-        "telephone": "0113234567",
-        "disabilityConfident": "Yes"
-      },
-      "jobLocation": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Sheffield",
-          "addressRegion": "West Yorkshire"
-        }
-      },
-      "minSalary": "15,008",
-      "maxSalary": "15,841",
-      "reference": "ABC123XXX",
-      "responsibilities": "After a customer agrees a mortgage with Lloyds Banking Group, you’ll be the friendly voice at the end of the phone, ready to answer their queries about payments, statements and more.",
-      "skills": "Great communication. Computer confident. Data analysis.",
-      "title": "Customer Service Adviser",
-      "workHours": "30-40 hours per week. Shifts between Mon-Sat. 0800-2000 5 days per week. 4-10 hour shifts. One Saturday per two weeks."
-    },
-    {
-      "@context": "http://schema.org",
-      "@type": "JobPosting",
-      "dateClosing": "2016-3-30",
-      "datePosted": "2011-10-31",
-      "employmentType": "Temporary, Employed",
-      "hiringOrganization": {
-        "@type": "Organization",
-        "name": "Food Eat Yum",
-        "contactPoint": "Jane Smith",
-        "email": "recruitment@food.com",
-        "telephone": "0113234567",
-        "disabilityConfident": "Yes"
-      },
-      "jobLocation": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "London"
-        }
-      },
-      "minSalary": "8 per hour",
-      "reference": "ABC123XXX",
-      "responsibilities": "Deliver food to our amazing customers with a smile.",
-      "skills": "Safe and reliable driver.",
-      "title": "Delivery Driver",
-      "workHours": "Nights"
     }
   ]
 }
