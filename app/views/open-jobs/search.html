@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout_unbranded.html" %}
 
 {% block content %}
   <main id="content" role="main">
@@ -6,11 +6,7 @@
 
     <div class="grid-row">
       <div class="column-two-thirds">
-        <h2 class="heading-large">{{jobs.length}} open jobs</h2>
-
-          <p>
-            <a class="" href="">Refine search</a>
-          </p>
+        <h2 class="heading-large">Open job examples</h2>
 
         {% for job in jobs %}
         <div class="job">

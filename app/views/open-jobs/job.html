@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout_unbranded.html" %}
 
 {% block content %}
 <main id="content" role="main">
@@ -98,7 +98,7 @@
       <p class="button button-start disabled">
         Apply now
       </p>
-      
+
 		</div>
 
     <div class="column-third spacing-bottom-third">
@@ -210,6 +210,6 @@ function toggleBounce() {
   }
 }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW0Ohl8tjseWY_hYLUs-3itKSZ055yTJQ&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
 
 {% endblock %}
