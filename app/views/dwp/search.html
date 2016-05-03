@@ -1,0 +1,56 @@
+{% extends "layout_unbranded.html" %}
+
+{% block content %}
+<!--
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+-->
+
+  <main id="content" role="main">
+    {% include "includes/phase_banner_alpha.html" %}
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <h2 class="heading-large">Current vacancies</h2>
+
+        <p>We are always looking for great people to join us. Our jobs change regularly, so keep checking back. Alternatively, <a href="#">send us your CV</a> and we will be in touch should anything become available</p>
+
+        <h2 class="heading-medium">Showing all</h2>
+
+        <p>Filter by <a href="#">location</a> or <a href="#">category</a>.</p>
+
+        {% for job in jobs %}
+        <div class="job">
+          <a href="job/{{loop.index0}}">
+            <h2 class="bold-medium">
+              {{job.title}}
+            </h2>
+              <ul>
+                <li class="font-xsmall">
+                  Location: <span class="bold-small">{{job.jobLocation.address.addressLocality}}</span>
+                </li>
+                <li class="font-xsmall">
+                  Salary up to: <span class="bold-small">&pound;{{job.maxSalary}}</span>
+                </li>
+                <li class="font-xsmall">
+                  Closing date: <span class="bold-small">
+
+                <!--
+                  <script>
+                    var moments = moment([ "{{job.dateClosing}}" ]).fromNow();
+                    console.log(moments);
+                    document.write(moments);
+                  </script>
+                -->
+
+                  {{ job.dateClosing }}
+
+                    </span>
+                </li>
+              </ul>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </main>
+{% endblock %}

@@ -1,0 +1,66 @@
+{
+  "jobs": [
+    {
+      "@context": "http://schema.org",
+      "@type": "JobPosting",
+      "apply": "https://www.civilservicejobs.service.gov.uk/csr/index.cgi?SID=c2VhcmNoX3NsaWNlX2N1cnJlbnQ9MSZvd25lcnR5cGU9ZmFpciZqb2JsaXN0X3ZpZXdfdmFjPTE0ODg2MzEmcGFnZWFjdGlvbj12aWV3dmFjYnlqb2JsaXN0Jm93bmVyPTUwNzAwMDAmY3NvdXJjZT1jc3FzZWFyY2gmcGFnZWNsYXNzPUpvYnMmdXNlcnNlYXJjaGNvbnRleHQ9MTc3NjU4ODYmcmVxc2lnPTE0NjAzNjc5MDQtYzM3YzUxYTQzNjk4YmRhYWYwNDUyYmM0Nzg0MDNlNmQxYmMzZmI1MQ",
+      "dateClosing": "2016-04-25",
+      "datePosted": "2016-04-25",
+      "description": "<p>The Digital Performance Analyst will work with one or more of DWP’s digital services and help to deliver a service that meets the Government’s Digital by Default Service Standard.</p><p>The purpose of this role is to use data and analytical insight from web analytics and wider sources to design and improve digital services that make a real difference to people’s lives. They will identify opportunities to maximise the use of data within the design and running of DWP’s digital services.</p><p>The Digital Performance Analyst is an integral part of the agile team developing a digital service; they work with different digital disciplines including User Researchers, Content Designers and Developers on a range of complex and challenging problems.</p><p>The Digital Performance Analyst is responsible for the analytics at all stages of the agile development lifecycle. They will:</p><ul><li>Work with services to define measurement frameworks/KPIs that effectively measure the benefits to the Department and citizens and generate new and useful insight</li><li>Implement and configure the analytical tools (primarily Google Analytics for web analytics) used in the collection, analysis and presentation of data.</li><li>Lead the analysis of key performance data and analysis for the digital service(s) they are working on, including regular reporting and ad-hoc analysis.</li><li>Translate insight in to actions that will continually improve the user experience and increase the benefit for the Department.</li></ul>",
+      "employmentType": "Permanent, Employed",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": "Department for Work and Pensions",
+        "contactPoint": "Jane Smith",
+        "email": "recruitment@abc.com",
+        "telephone": "0113234567",
+        "disabilityConfident": "Yes"
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Leeds, Manchester, Newcastle"
+        }
+      },
+      "maxSalary": "41,327",
+      "reference": "1488631",
+      "responsibilities": "<p>The precise responsibilities of the post holder will depend on the digital service they are working with and the stage of the agile lifecycle it is at. However, the main responsibilities of the post are likely to include most or all of the following:</p><p><strong>PART OF AGILE TEAM(S) </strong></p><ul><li>Work with the service manager and the rest of the agile team to make sure the service meets the performance requirements set out in the Digital by Default Service Standard. Take the lead in ensuring the analytics criteria of the service assessment are met.</li><li>Work in a collaborative manner and share examples of best practice in digital analytics across DWP’s digital projects and with other digital analysts in government.</li><li>Help build the technical and analytical capability of the team.</li></ul><h3>DEFINE THE PERFORMANCE FRAMEWORK</h3><ul><li>Take a leading role in the development of the key performance indicators (KPIs) for the service – challenging the team to design the right metrics to measure success.</li><li>Ensure data integrity and proactively identify data and reporting issues and improvement opportunities.</li><li>Work with all the analytical professions within the Department (Statisticians, Social Researchers, Economists, User Researchers, and Operational Researchers) to provide high quality digital performance analysis.</li></ul><h3>CONFIGURE THE ANALYTICS</h3><ul><li>Be an expert in the configuration and deployment of digital analytics solutions – including keeping abreast of the latest developments and new technologies in the market, and bringing them in to the team where appropriate.</li><li>Ensure the right data is collected and is made available to the correct stakeholders.<br /> Ensure high-quality analysis of departmental data and pioneer innovative new ways to conduct and use analysis.</li></ul><h3>PRESENT PERFORMANCE ANALYSIS</h3><ul><li>Be responsible for delivering high-quality analysis of web analytics and other data in relation to digital services.</li><li>Build dashboards/reports to communicate service performance against key indicators to internal and external stakeholders, including senior management as appropriate.</li><li>Be able to explain analytical findings to a range of stakeholders through compelling data stories.</li></ul><h3>GENERATE USEFUL INSIGHT</h3><ul><li>Drive evidence based decision making and create/maintain a data-driven performance culture.</li><li>Use data to understand customer behaviour and to deliver meaningful and actionable insight to improve the service, proactively offering suggestions of ways to enhance the service.</li><li>Ensure DWP understands how people are using digital service(s) and focus on undertaking analysis that will drive customer-centric innovations and investments for the Department’s digital services.</li><li>Extract statistical information from various applications and data sources (including quantitative and qualitative evidence gathered via surveys, management information, web analytics and transactional data) and use appropriate analytical tools to derive actionable insight on the service and its customers.</li><li>Identify obstacles to improving the performance of the digital service and take a leading role in the agile team to overcome those obstacles.</li></ul>",
+      "skills": "<p><strong>Essential Skills and Experience:</strong></p><ul><li>Qualification in an analytical discipline. Including knowledge of important analytical concepts such as sampling, statistical significance and bias.</li><li>Proven experience of working with Google Analytics including:</li><li>Implementation that goes beyond the basic snippet, such as custom tags or virtual pageviews.</li><li>Taking analysis beyond standard reports through building segments, using custom dimensions and using tools such as the GA plugin for Google Sheets or Excel.</li></ul><ul><li>Experience of making data driven recommendations to improve digital services.</li><li>Exceptional analytical and problem-solving skills and the ability to quickly develop recommendations based on the quantitative and qualitative evidence gathered via web analytics and other digital sources.</li><li>Proven track record of ability to translate technical concepts to a non-technical audience, including senior management.</li><li>Demonstrable experience with data analysis, web analytics and visualisation tools e.g. Excel, Google Sheets, R etc.</li><li>Proven track record of maximising the value of data, from gathering data and performing analysis through to dissemination and presentation of results.</li><li>Ability to lead and champion working effectively across Departmental and other boundaries.</li><li>Strong interest in and passion for developing and delivering digital services.</li></ul><p><strong>Competencies</strong><br /> You will be asked to supply evidence of meeting these competencies when you apply.<br /> Changing and improving<br /> Collaborating and partnering<br /> Delivering at pace<br /> Leading and communicating<br /> Managing a quality service<br /> Civil Service Competency Framework</p>",
+      "title": "Digital Performance Analyst",
+      "workHours": "37 hours per week"
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": "JobPosting",
+      "apply": "https://www.civilservicejobs.service.gov.uk/csr/jobs.cgi?owner=5070139&ownertype=fair&jcode=1490750&vt_template=1478&adminview=1",
+      "dateClosing": "2016-05-09",
+      "datePosted": "2011-04-09",
+      "description": "<p><strong>+</strong> Competitive work place defined pension<br> <strong>+</strong> Flexible working arrangements<br> <strong>+</strong> Generous annual leave allowance</p><p>DWP is introducing the biggest change to the welfare system in a generation.</p><p>The User Experience Design team is designing the digital services to deliver these changes. We work&nbsp;in Digital DWP hubs in Leeds, London, and Newcastle with our own Digital Academy to help us deliver exemplary digital services.</p><p>We believe that good design means starting with user needs. Good design is something that works well for the people that need to use it. The User Experience team is also linked to the wider design teams within the Government Digital Service and across government departments.</p><p>We are looking for Content Designers who will make an impact in the exciting new arena of developing digital services for the UK Government. Better digital services in government will change the face of public services and have the potential to dramatically transform the future of millions of people.</p><p>This is a challenging role that will appeal to professionals looking to join a growing digital team. It is a permanent position with opportunities to grow and develop your role in the organisation.</p>",
+      "employmentType": "Permanent, Employed",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": "Department for Work and Pensions",
+        "contactPoint": "Jane Smith",
+        "email": "recruitment@abc.com",
+        "telephone": "0113234567",
+        "disabilityConfident": "Yes"
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Leeds",
+          "addressRegion": "West Yorkshire",
+          "postalCode": "LS10 1ET"
+        }
+      },
+      "maxSalary": "50,500",
+      "reference": "1490750",
+      "responsibilities": "<ul><li>Work on new and existing content for the department’s digital services on GOV.UK.</li><li>Improve content and services to ensure accurate, timely, high-quality products.</li><li>Develop and apply content strategies.</li><li>Act as the authority on matters that have no predictable outcome.</li></ul>",
+      "skills": "<ul><li>Content writing and design skills, including writing for the web</li><li>Exemplar grammatical and non-verbal skills</li><li>Passion about user needs</li><li>Proven record using metrics and feedback to define/refine content</li><li>Experience working in technical teams in complex environments</li><li>Experience working within a web application development environment</li><li>Ability to choose the best format/style for displaying info</li></ul></section>",
+      "title": "Content Designer",
+      "workHours": "37 hours per week"
+    }
+  ]
+}
