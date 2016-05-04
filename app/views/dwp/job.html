@@ -111,7 +111,15 @@
 
       {% endif %}
 
-      <a href="{{job.apply}}" class="button button-start">
+      {% if job.description %}
+
+			<h2 class="heading-medium">Job description</h2>
+
+			<p>{{job.description | safe}}</p>
+
+      {% endif %}
+
+      <a href="{{job.url}}" class="button button-start">
         Apply now
       </a>
 
